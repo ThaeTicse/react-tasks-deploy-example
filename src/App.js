@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import TaskList from './TaskList'
+import TaskForm from './TaskForm'
 import './App.css';
+import {dataTasks} from './dataTasks';
+import {useState, useEffect } from 'react';
 
 function App() {
+
+  const [tasks, setTasks] = useState([])
+
+  useEffect(()=>{
+      setTasks(dataTasks)
+  },[])
+
+  function createTask(task){
+    setTasks([...tasks,{
+      title: task.title,
+      id: tasks.length,
+      description: task.description
+    }])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TaskForm createTask={createTask}/>
+      <TaskList tasks={tasks}/>
+    </>
   );
 }
 
