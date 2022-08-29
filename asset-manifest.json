@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-tasks-deploy-example/static/css/main.b813e1cd.css",
+    "main.js": "/react-tasks-deploy-example/static/js/main.53c9b498.js",
+    "index.html": "/react-tasks-deploy-example/index.html",
+    "main.b813e1cd.css.map": "/react-tasks-deploy-example/static/css/main.b813e1cd.css.map",
+    "main.53c9b498.js.map": "/react-tasks-deploy-example/static/js/main.53c9b498.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b813e1cd.css",
+    "static/js/main.53c9b498.js"
+  ]
+}
